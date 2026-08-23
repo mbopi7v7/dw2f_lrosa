@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestión de Dependencias</title>
+    <link rel="stylesheet" href="ext/bootstrap/css/bootstrap.min.css">
+</head>
+<body class="container mt-4">
+
+    <h1 class="mb-4">Registro de Dependencias</h1>
+
+    <!-- Mensajes -->
+    <div id="mensajes" class="alert d-none"></div>
+
+    <!-- Formulario -->
+    <form id="formDependencia" class="mb-4">
+        <div class="row mb-2">
+            <div class="col">
+                <input type="text" name="nombre" class="form-control" placeholder="Nombre" required>
+            </div>
+            <div class="col">
+                <select name="tipo" class="form-select" required>
+                    <option value="">Seleccione tipo</option>
+                    <option>Oficina</option>
+                    <option>Laboratorio</option>
+                    <option>Dirección</option>
+                    <option>Secretaría</option>
+                    <option>Departamento</option>
+                </select>
+            </div>
+        </div>
+        <div class="row mb-2">
+            <div class="col">
+                <input type="text" name="edificio" class="form-control" placeholder="Edificio" required>
+            </div>
+            <div class="col">
+                <input type="text" name="piso" class="form-control" placeholder="Piso" required>
+            </div>
+        </div>
+        <div class="row mb-2">
+            <div class="col">
+                <input type="text" name="responsable" class="form-control" placeholder="Responsable" required>
+            </div>
+            <div class="col">
+                <input type="text" name="telefono" class="form-control" placeholder="Teléfono" required>
+            </div>
+        </div>
+        <div class="row mb-2">
+            <div class="col">
+                <input type="email" name="correo" class="form-control" placeholder="Correo" required>
+            </div>
+            <div class="col">
+                <select name="estado" class="form-select" required>
+                    <option value="">Seleccione estado</option>
+                    <option>Activa</option>
+                    <option>Inactiva</option>
+                </select>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Registrar</button>
+    </form>
+
+    <!-- Tabla -->
+    <table class="table table-bordered">
+        <thead class="table-dark">
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Tipo</th>
+                <th>Edificio</th>
+                <th>Piso</th>
+                <th>Responsable</th>
+                <th>Teléfono</th>
+                <th>Correo</th>
+                <th>Estado</th>
+            </tr>
+        </thead>
+        <tbody id="tablaDependencias"></tbody>
+    </table>
+
+    <script src="js/app.js" type="module"></script>
+</body>
+</html>
